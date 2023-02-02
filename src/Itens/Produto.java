@@ -20,8 +20,9 @@ public class Produto{
         setMarca(marca);
         setPreco(preco);
     }
+    
     public void cadastroProdutos(String nome, String categoria, String marca, Double preco){
-        listarProdutos.add(new Livro(nome, categoria, marca, preco));
+        listarProdutos.add(new Produto(nome, categoria, marca, preco));
     }
     public void listarProdutos(){
         for (int i = 0; i < listarProdutos.size(); i++){
