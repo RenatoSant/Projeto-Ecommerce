@@ -18,12 +18,12 @@ public class Livro extends Produto {
 
 
     public void cadastrarLivro(String nome, String autor, String editora, String genero, Double preco){
-        listarProdutos.add(new Livro(nome, autor, editora, genero, preco));
+        listaProdutos.add(new Livro(nome, autor, editora, genero, preco));
     }
 
     public void listarProdutos(){
-        for (int i = 0; i < listarProdutos.size(); i++){
-           System.out.println(listarProdutos.get(i));}
+        for (int i = 0; i < listaProdutos.size(); i++){
+           System.out.println(listaProdutos.get(i));}
         }
 
 
