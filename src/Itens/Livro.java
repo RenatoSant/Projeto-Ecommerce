@@ -7,8 +7,9 @@ public class Livro extends Produto {
 
     public Livro(){
 }
-    public Livro(String nome, String autor, String editora, String genero, Double preco){
+    public Livro(String nome,String categoria, String autor, String editora, String genero, Double preco){
         setNome(nome);
+        setCategoria(categoria);
         setAutor(autor);
         setEditora(editora);
         setGenero(genero);
@@ -17,15 +18,7 @@ public class Livro extends Produto {
     
 
 
-    public void cadastrarLivro(String nome, String autor, String editora, String genero, Double preco){
-        listaProdutos.add(new Livro(nome, autor, editora, genero, preco));
-    }
-
-    public void listarProdutos(){
-        for (int i = 0; i < listaProdutos.size(); i++){
-           System.out.println(listaProdutos.get(i));}
-        }
-
+    
 
     public String getEditora() {
         return editora;
@@ -65,7 +58,7 @@ public class Livro extends Produto {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    
+   
     
     
 }

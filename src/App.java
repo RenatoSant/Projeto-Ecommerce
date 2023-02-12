@@ -1,18 +1,43 @@
 import java.util.Collections;
 
 import Itens.*;
+import Listas.*;
+import Ordenador.*;
 public class App {
     public static void main(String[] args) throws Exception {
-      // Produto item = new Produto("Tomate", "Mercado", "Da fazenda", 8.65);
-      // Produto item1 = new Produto("Cebola", "Mercado", "Da fazenda", 3.21);
-      // Produto item2 = new Produto("Alho", "Mercado", "Da fazenda", 25.64);
-      // Produto item3 = new Produto("Alface", "Mercado", "Da fazenda", 1.86);
-//
-      // item.cadastroProdutos("Tomate", "MERCADO", "Da fazenda", 8.65);
-      // item.listarProdutos(); item.ordenarProduto();
-      
-       
+      Lista lista1 = new Lista();
+        lista1.setProdutos(new Produto("Arroz", "Mercado", "Pai joao", 6.79));
+        lista1.setProdutos(new Produto("Feijao", "Mercado", "Estrela", 4.25));
+        lista1.setProdutos(new Livro("Overlord","Livro", "Maruyama", "JBC", "Dark fantasy", 89.59));
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        } 
+        System.out.println("Lista crescente ordenada por nome --------------------- ");
+        Collections.sort(lista1.getProdutos(), new OrdenadorNomeCrescente());
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        }
+        System.out.println("Lista decrescente ordenada por nome ----------------");
+        Collections.sort(lista1.getProdutos(), new OrdenadorNomeDecrescente());
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        }
+        System.out.println("Lista crescente ordenada por preço -----------------");
+        Collections.sort(lista1.getProdutos(), new OrdenadorPrecoCrescente());
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        }
+        System.out.println("Lista decrescente ordenada por preço ----------------");
+        Collections.sort(lista1.getProdutos(), new OrdenadorPrecoDescrescente());
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        }
+        lista1.editorDeListas();
+        for (Produto listas : lista1.getProdutos()) {
+            System.out.println(listas.toString());
+        }
+        lista1.filtroDeListas();
+        lista1.printFiltro();
     }
+}        
 
-   
-}
