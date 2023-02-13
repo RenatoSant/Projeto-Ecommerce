@@ -58,6 +58,10 @@ public class Livro extends Produto {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+    @Override
+    public String toString() {
+        return "[ nome = " + nome + " categoria = " + categoria +  " autor = " + autor + ", editora =" + editora + ", genero =" + genero + " preço = R$ " + preco + "]";
+    }
    
     
     

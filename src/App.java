@@ -3,9 +3,13 @@ import java.util.Collections;
 import Itens.*;
 import Listas.*;
 import Ordenador.*;
+import Validador.Login;
 public class App {
     public static void main(String[] args) throws Exception {
-      Lista lista1 = new Lista();
+        //Login admin1 = new Login();
+        //admin1.cadastroPerfil();
+        //admin1.loginDeAcesso();
+        Lista lista1 = new Lista();
         lista1.setProdutos(new Produto("Arroz", "Mercado", "Pai joao", 6.79));
         lista1.setProdutos(new Produto("Feijao", "Mercado", "Estrela", 4.25));
         lista1.setProdutos(new Livro("Overlord","Livro", "Maruyama", "JBC", "Dark fantasy", 89.59));
